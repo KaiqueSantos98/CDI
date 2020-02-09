@@ -2,11 +2,10 @@ package br.com.alura.livraria.bean;
 
 import java.io.Serializable;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.inject.Named;
 
-@ManagedBean
-@SessionScoped
+@Named
+@javax.enterprise.context.SessionScoped
 public class TemaBean implements Serializable {
 	
 	private static final long serialVersionUID = 3740536135286026768L;
