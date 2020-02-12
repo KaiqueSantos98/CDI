@@ -8,9 +8,11 @@ import javax.persistence.criteria.CriteriaQuery;
 public class DAO<T> {
 
 	private final Class<T> classe;
-
-	public DAO(Class<T> classe) {
+	private EntityManager em;
+	
+	public DAO(Class<T> classe, EntityManager em) {
 		this.classe = classe;
+		this.em = em;
 	}
 
 	public void adiciona(T t) {
